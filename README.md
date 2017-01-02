@@ -1,6 +1,8 @@
 # homebridge-docker
 Docker image for running [Homebridge](https://github.com/nfarina/homebridge) on a Raspberry Pi
 
+Credit goes to [ViViDboarder/docker-rpi-homebridge](https://github.com/ViViDboarder/docker-rpi-homebridge) & [amitgandhinz/docker-rpi-homebridge](https://github.com/amitgandhinz/docker-rpi-homebridge) for their work on this project.
+
 ## Homebridge
 Here is what the author has to say about Homebridge:
 
