@@ -24,6 +24,7 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends \
   net-tools \
   nano \
   apt-utils \
+  locales \
 && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN alias ll='ls -alG'
@@ -62,7 +63,7 @@ RUN mkdir -p /var/homebridge/.homebridge
 VOLUME /var/homebridge/.homebridge
 WORKDIR /var/homebridge/.homebridge
 
-ADD image/run.sh /var/homebridge/run.sh
+ADD start.sh /var/homebridge/start.sh
 
 EXPOSE 5353 51826
-CMD ["/var/homebridge/run.sh"]
+CMD ["/var/homebridge/start.sh"]
