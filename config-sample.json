@@ -1,0 +1,28 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "B8:27:EB:9E:1D:AA",
+        "port": 51826,
+        "pin": "031-45-154"
+    },
+
+    "accessories": [
+    ],
+
+    "platforms": [
+        {
+            "platform": "Nest",
+            "token": "c.7ZLl9vu0NrmPgvBa0eUkCOdKXIlGPWO1FSrYrjs2NvOVnuoSePhgl47dgm3zcQJkRD9IBRWmRfwf5Jo2oCgcjASrtTE5cpIJS4GhMUvTdA6usQ60eC9L81ScZDxDIBOeOrVphTRp4DWXOMEI",
+            "clientId": "07f01878-8ee2-480d-b734-718e07c9eef6",
+            "clientSecret": "9ambC0PuXSHY6ETozhGmrSYoP",
+            "code": "5B2WKCW5"
+        },
+
+       {
+         "platform": "BelkinWeMo",
+         "name": "WeMo Platform",
+         "noMotionTimer": 60,
+         "ignoredDevices": []
+       }   
+    ]
+}
