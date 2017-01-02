@@ -1,0 +1,9 @@
+homebridge:
+  build: .
+  ports:
+    - "51826:51826"
+  net: host
+  volumes:
+    - ./config.json:/var/homebridge/.homebridge/config.json
+    - ./plugins.txt:/var/homebridge/.homebridge/plugins.txt
+    - ./persist:/var/homebridge/.homebridge/persist
