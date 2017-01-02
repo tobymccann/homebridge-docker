@@ -23,6 +23,7 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends \
   libnss-mdns \
   net-tools \
   nano \
+  apt-utils \
 && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN alias ll='ls -alG'
@@ -35,9 +36,9 @@ RUN npm install -g --unsafe-perm \
         homebridge \
         hap-nodejs \
         node-gyp && \
-    cd /usr/local/lib/node_modules/homebridge/ && \
+    cd /usr/lib/node_modules/homebridge/ && \
     npm install --unsafe-perm bignum && \
-    cd /usr/local/lib/node_modules/hap-nodejs/node_modules/mdns && \
+    cd /usr/lib/node_modules/hap-nodejs/node_modules/mdns && \
     node-gyp BUILDTYPE=Release rebuild
 
 ##################################################
