@@ -20,9 +20,12 @@ $ curl -sSL get.docker.com | sh
 and then
 
 ```
-$ sudo usermod -aG docker $USER
+$ sudo usermod -aG docker ${USER}
 ```
 
+```
+$ pip install docker-compose
+```
 
 ## Configuration
 There are two files that need to be provided in order for Homebridge to run.
