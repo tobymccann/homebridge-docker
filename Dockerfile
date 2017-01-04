@@ -66,12 +66,12 @@ RUN groupadd -r ${HOMEBRIDGE_USER} -g 433 \
 ##################################################
 
 EXPOSE 5353 51826
+COPY ./start.sh ${HOMEBRIDGE_HOME}/start.sh
+RUN chmod 755 ${HOMEBRIDGE_HOME}/start.sh
 
 USER ${HOMEBRIDGE_USER}
 RUN mkdir -p ${HOMEBRIDGE_INSTALL_DIR}
 VOLUME ["${HOMEBRIDGE_CONFIG}", "${HOMEBRIDGE_PLUGINS}", "${HOMEBRIDGE_PERSIST_DIR}"]
 WORKDIR ${HOMEBRIDGE_HOME}
 
-COPY ./start.sh ${HOMEBRIDGE_HOME}/start.sh
-RUN chmod 755 ${HOMEBRIDGE_HOME}/start.sh
 ENTRYPOINT ["/var/homebridge/start.sh"]
